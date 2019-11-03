@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:id="@+id/balance"
+        android:background="#f83d8fb7"
+        android:gravity="center"
+        android:text="Account Information"
+        android:layout_marginBottom="20dp"
+        android:textColor="#fff"
+        android:textSize="25dp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:id="@+id/borrowing"
+        android:layout_marginTop="16dp"
+        android:background="#f83d8fb7"
+        android:gravity="center"
+        android:layout_marginBottom="20dp"
+        android:text="Borrowing status"
+        android:textColor="#fff"
+        android:textSize="25dp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:id="@+id/lending"
+        android:layout_marginTop="16dp"
+        android:background="#f83d8fb7"
+        android:gravity="center"
+        android:layout_marginBottom="20dp"
+        android:text="Lending status"
+        android:textColor="#fff"
+        android:textSize="25dp"/>
+
+</LinearLayout>

@@ -1,0 +1,106 @@
+{
+  "project_info": {
+    "project_number": "387823608244",
+    "firebase_url": "https://megalodon-b5c06.firebaseio.com",
+    "project_id": "megalodon-b5c06",
+    "storage_bucket": "megalodon-b5c06.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:387823608244:android:3ebd4eea13f0441a32d2e1",
+        "android_client_info": {
+          "package_name": "com.example.login"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "387823608244-rjpnl25fqervr37sl16rubqv1jnls7qc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBki2gtPLc7PHOVfuxWcs4dElS_SEa5VCI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "387823608244-rjpnl25fqervr37sl16rubqv1jnls7qc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:387823608244:android:d2f6f807373baf7e32d2e1",
+        "android_client_info": {
+          "package_name": "com.hackgsu.shark"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "387823608244-lig1rik5e669dc3h4th84q9vmetpvfq9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hackgsu.shark",
+            "certificate_hash": "b3dc7f46c97ae1e1be47cefca796a88dbab97cc6"
+          }
+        },
+        {
+          "client_id": "387823608244-rjpnl25fqervr37sl16rubqv1jnls7qc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBki2gtPLc7PHOVfuxWcs4dElS_SEa5VCI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "387823608244-rjpnl25fqervr37sl16rubqv1jnls7qc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:387823608244:android:0376f8c40fae6cc232d2e1",
+        "android_client_info": {
+          "package_name": "com.hackgu.shark"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "387823608244-rjpnl25fqervr37sl16rubqv1jnls7qc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBki2gtPLc7PHOVfuxWcs4dElS_SEa5VCI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "387823608244-rjpnl25fqervr37sl16rubqv1jnls7qc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
