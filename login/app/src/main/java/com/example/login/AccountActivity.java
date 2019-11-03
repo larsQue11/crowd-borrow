@@ -15,9 +15,13 @@ import android.widget.Toast;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
+
+import java.util.HashMap;
 
 public class AccountActivity extends AppCompatActivity {
 
@@ -33,33 +37,30 @@ public class AccountActivity extends AppCompatActivity {
         Bundle bundle = arrive.getExtras();
         String accountNumber = bundle.get("accountNumber").toString();
 
-        TextView output = findViewById(R.id.balanceOutput);
+        final TextView output = findViewById(R.id.balanceOutput);
 
         FirebaseFirestore db = FirebaseFirestore.getInstance();
-        CollectionReference acctsCollection = db.collection("crowd_borrow_accounts");
+        DocumentReference docRef = db.collection("crowd_borrow_accounts").document(accountNumber);
 
-
-        try {
-            acctsCollection.document(accountNumber).collection("currentBalance").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-                @Override
-                public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                    if (task.isSuccessful()) {
-
-                        for (QueryDocumentSnapshot document : task.getResult()) {
-                            Log.d(TAG, document.getId() + " => " + document.getData().get("amount"));
-                            stringOutput = document.getData().get("amount").toString();
-                        }
-
+        docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                if (task.isSuccessful()) {
+                    DocumentSnapshot document = task.getResult();
+                    if (document.exists()) {
+                        HashMap<String, Integer> currentBalance =(HashMap<String, Integer>) document.getData().get("currentBalance");
+                        String temp = "Current Balance: $"+currentBalance.get("amount");
+                        output.setText(temp);
+                        Log.d(TAG, "DocumentSnapshot data: " + currentBalance.get("amount"));
                     } else {
-                        Log.w(TAG, "Error getting documents.", task.getException());
+                        Log.d(TAG, "No such document");
                     }
+                } else {
+                    Log.d(TAG, "get failed with ", task.getException());
                 }
-            });
-        } catch (Exception e) {
-            Context context = getApplicationContext();
-            Toast.makeText(context, "No account established", Toast.LENGTH_SHORT).show();
-        }
+            }
+        });
 
-        output.setText(stringOutput);
+        //output.setText(stringOutput);
     }
 }
